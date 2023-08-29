@@ -13,7 +13,7 @@
         <li><strong>Print Report:</strong> Displays a report of all students including their name, roll number, course, and attendance status.</li>
         <li><strong>Exit:</strong> Exits the program.</li>
     </ol>
-    <h3>How to Use</h3>
+    <h2>How to Use</h2>
     <ol>
         <li>Compile the program using a C compiler (e.g., GCC).</li>
         <li>Run the compiled executable.</li>
@@ -24,7 +24,7 @@
 <H3>Data Structure</H3>
     <p>The program uses a struct <code>student</code> to store student information, including name, roll number, course, and attendance status (1 for present, 0 for absent). Students are stored in an array.</p>
 
-    <H3>Sample Usage</H3>
+    <h3>Sample Usage</h3>
    
 1. Add student
 2. Remove student
