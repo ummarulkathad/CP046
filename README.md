@@ -6,11 +6,11 @@
     <h1>Student Attendance Management System</h1>
     <p>This C program is designed to manage a list of students and their attendance records. It provides the following functionalities:</p>
     <ol>
-        <li><strong>Add Student:</strong> Allows you to add a new student to the list with their name, roll number, and course.</li>
-        <li><strong>Remove Student:</strong> Removes a student from the list based on their roll number.</li>
-        <li><strong>Mark Attendance:</strong> Marks attendance for a student based on their roll number (1 for present, 0 for absent).</li>
-        <li><strong>Print Report:</strong> Displays a report of all students including their name, roll number, course, and attendance status.</li>
-        <li><strong>Exit:</strong> Exits the program.</li>
+        <li>Add Student: Allows you to add a new student to the list with their name, roll number, and course.</li>
+        <li>Remove Student: Removes a student from the list based on their roll number.</li>
+        <li>Mark Attendance: Marks attendance for a student based on their roll number (1 for present, 0 for absent).</li>
+        <li>Print Report: Displays a report of all students including their name, roll number, course, and attendance status.</li>
+        <li>Exit: Exits the program.</li>
     </ol>
 
     <h2>How to Use</h2>
