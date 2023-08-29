@@ -21,10 +21,7 @@
         <li>Follow the on-screen prompts to input data or make selections.</li>
     </ol>
 
-<H3>Data Structure</H3>
-    <p>The program uses a struct <code>student</code> to store student information, including name, roll number, course, and attendance status (1 for present, 0 for absent). Students are stored in an array.</p>
-
-    <h3>Sample Usage</h3>
+ <H3>Sample Usage</H3>
    
 1. Add student
 2. Remove student
