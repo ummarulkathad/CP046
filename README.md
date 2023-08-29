@@ -14,13 +14,7 @@
         <li><strong>Exit:</strong> Exits the program.</li>
     </ol>
 
-    <h2>How to Use</h2>
-    <ol>
-        <li>Compile the program using a C compiler (e.g., GCC).</li>
-        <li>Run the compiled executable.</li>
-        <li>Choose options from the menu to perform actions on the student list.</li>
-        <li>Follow the on-screen prompts to input data or make selections.</li>
-    </ol>
+    
 
     <h2>Data Structure</h2>
     <p>The program uses a struct <code>student</code> to store student information, including name, roll number, course, and attendance status (1 for present, 0 for absent). Students are stored in an array.</p>
