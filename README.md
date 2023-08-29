@@ -13,10 +13,7 @@
         <li><strong>Print Report:</strong> Displays a report of all students including their name, roll number, course, and attendance status.</li>
         <li><strong>Exit:</strong> Exits the program.</li>
     </ol>
-
-    
-
-    <h1>Data Structure</h1>
+<H2>Data Structure</H2>
     <p>The program uses a struct <code>student</code> to store student information, including name, roll number, course, and attendance status (1 for present, 0 for absent). Students are stored in an array.</p>
 
     <h2>Sample Usage</h2>
