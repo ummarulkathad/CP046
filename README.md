@@ -60,6 +60,6 @@ Student course: Computer Science
 Student attendance: 1
     
 
-    <p>Feel free to modify, enhance, or integrate this code into your projects as needed.</p></pre>
+</pre>
 </body>
 </html>
