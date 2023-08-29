@@ -58,8 +58,8 @@ Student name: John Doe
 Student roll number: 101
 Student course: Computer Science
 Student attendance: 1
-    </pre>
+    
 
-    <p>Feel free to modify, enhance, or integrate this code into your projects as needed.</p>
+    <p>Feel free to modify, enhance, or integrate this code into your projects as needed.</p></pre>
 </body>
 </html>
