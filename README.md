@@ -16,7 +16,7 @@
 
     
 
-    <h2>Data Structure</h2>
+    <h1>Data Structure</h1>
     <p>The program uses a struct <code>student</code> to store student information, including name, roll number, course, and attendance status (1 for present, 0 for absent). Students are stored in an array.</p>
 
     <h2>Sample Usage</h2>
