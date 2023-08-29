@@ -13,7 +13,7 @@
         <li>Exit: Exits the program.</li>
     </ol>
 
-    <h2>How to Use</h2>
+    <h1>How to Use</h1>
     <ol>
         <li>Compile the program using a C compiler.</li>
         <li>Run the compiled executable.</li>
