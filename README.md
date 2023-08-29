@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Attendance Management System</title>
 </head>
 <body>
     <h1>Student Attendance Management System</h1>
