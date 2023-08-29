@@ -25,7 +25,7 @@
     <p>The program uses a struct <code>student</code> to store student information, including name, roll number, course, and attendance status (1 for present, 0 for absent). Students are stored in an array.</p>
 
     <H2>Sample Usage</H2>
-    <pre>
+   
 1. Add student
 2. Remove student
 3. Mark attendance
@@ -58,7 +58,7 @@ Student name: John Doe
 Student roll number: 101
 Student course: Computer Science
 Student attendance: 1
-    </pre>
+
 
     <p>Feel free to modify, enhance, or integrate this code into your projects as needed.</p>
 </body>
