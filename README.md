@@ -13,7 +13,7 @@
         <li><strong>Print Report:</strong> Displays a report of all students including their name, roll number, course, and attendance status.</li>
         <li><strong>Exit:</strong> Exits the program.</li>
     </ol>
-    <H2>How to Use</H2>
+    <h2>How to Use</h2>
     <ol>
         <li>Compile the program using a C compiler (e.g., GCC).</li>
         <li>Run the compiled executable.</li>
