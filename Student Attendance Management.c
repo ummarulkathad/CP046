@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <time.h> // Include the time header
 
 struct student {
   char name[50];
@@ -56,14 +58,21 @@ void mark_attendance(struct student *students, int *num_students, int roll_numbe
 }
 
 void print_report(struct student *students, int num_students) {
-  // Print the attendance report for all students.
-  int i;
-  for (i = 0; i < num_students; i++) {
-    printf("Student name: %s\n", students[i].name);
-    printf("Student roll number: %d\n", students[i].roll_number);
-    printf("Student course: %s\n", students[i].course);
-    printf("Student attendance: %d\n\n", students[i].attendance);
+  // Get the current date and time.
+  time_t t = time(NULL);
+  struct tm tm = *localtime(&t);
+
+  // Print the date.
+  printf("Date: %d-%02d-%02d %02d:%02d:%02d\n\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
+
+  // Print the attendance report in a table format.
+  printf("| %-20s | %-12s | %-20s | %-10s |\n", "Name", "Roll Number", "Course", "Attendance");
+  printf("+----------------------+--------------+----------------------+------------+\n");
+
+  for (int i = 0; i < num_students; i++) {
+    printf("| %-20s | %-12d | %-20s | %-10d |\n", students[i].name, students[i].roll_number, students[i].course, students[i].attendance);
   }
+  printf("+----------------------+--------------+----------------------+------------+\n");
 }
 
 int main() {
@@ -100,7 +109,7 @@ int main() {
         scanf("%d", &is_present);
         mark_attendance(students, &num_students, roll_number, is_present);
         break;
-              case 4:
+      case 4:
         print_report(students, num_students);
         break;
       case 5:
