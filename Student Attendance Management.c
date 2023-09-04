@@ -8,6 +8,7 @@ struct student {
   int roll_number;
   char course[50];
   int attendance; // 1 for present, 0 for absent
+  char attendance_date[20]; // Store attendance date and time
 };
 
 void add_student(struct student *students, int *num_students) {
@@ -19,6 +20,7 @@ void add_student(struct student *students, int *num_students) {
   printf("Enter the student course: ");
   scanf("%s", students[*num_students].course);
   students[*num_students].attendance = 0; // 0 for absent by default
+  strcpy(students[*num_students].attendance_date, ""); // Initialize attendance_date
 
   // Increment the number of students.
   (*num_students)++;
@@ -39,6 +41,8 @@ void remove_student(struct student *students, int *num_students, int roll_number
       students[i] = students[i + 1];
     }
     (*num_students)--;
+  } else {
+    printf("Student with roll number %d not found.\n", roll_number);
   }
 }
 
@@ -51,28 +55,31 @@ void mark_attendance(struct student *students, int *num_students, int roll_numbe
     }
   }
 
-  // If the student is found, mark their attendance.
+  // If the student is found, mark their attendance and set the date.
   if (i < *num_students) {
     students[i].attendance = is_present;
+
+    // Get the current date and time.
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+
+    // Store the date in the student's record.
+    sprintf(students[i].attendance_date, "%d-%02d-%02d %02d:%02d:%02d",
+            tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
+  } else {
+    printf("Student with roll number %d not found.\n", roll_number);
   }
 }
 
 void print_report(struct student *students, int num_students) {
-  // Get the current date and time.
-  time_t t = time(NULL);
-  struct tm tm = *localtime(&t);
-
-  // Print the date.
-  printf("Date: %d-%02d-%02d %02d:%02d:%02d\n\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
-
   // Print the attendance report in a table format.
-  printf("| %-20s | %-12s | %-20s | %-10s |\n", "Name", "Roll Number", "Course", "Attendance");
-  printf("+----------------------+--------------+----------------------+------------+\n");
+  printf("| %-20s | %-12s | %-20s | %-10s | %-20s |\n", "Name", "Roll Number", "Course", "Attendance", "Attendance Date");
+  printf("+----------------------+--------------+----------------------+------------+----------------------+\n");
 
   for (int i = 0; i < num_students; i++) {
-    printf("| %-20s | %-12d | %-20s | %-10d |\n", students[i].name, students[i].roll_number, students[i].course, students[i].attendance);
+    printf("| %-20s | %-12d | %-20s | %-10d | %-20s |\n", students[i].name, students[i].roll_number, students[i].course, students[i].attendance, students[i].attendance_date);
   }
-  printf("+----------------------+--------------+----------------------+------------+\n");
+  printf("+----------------------+--------------+----------------------+------------+----------------------+\n");
 }
 
 int main() {
